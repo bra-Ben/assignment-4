@@ -1,5 +1,5 @@
 import Login from './login/login'
-// import Signup from './signup/signup'
+import Signup from './signup/signup'
 
 
 
@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
      
-      <Login />
+      {/* <Login /> */}
 
-      {/* <Signup /> */}
+      <Signup />
 
 
     </div>

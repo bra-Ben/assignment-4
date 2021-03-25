@@ -37,9 +37,9 @@ function Login() {
 
     return (
 
-        <div className='form-container'>
+        <div className='login-container'>
 
-            <form className='formdiv'>
+            <form className='logindiv'>
 
                 <div className='formtop'>               
                     <h1>Welcome</h1>
