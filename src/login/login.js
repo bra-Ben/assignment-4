@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@material-ui/icons/Person';
+import LockIcon from '@material-ui/icons/Lock';
+
 
 function Login() {
 
@@ -39,26 +43,34 @@ function Login() {
 
                 <div className='formtop'>               
                     <h1>Welcome</h1>
+                    <HomeIcon style={{ fontSize: 70, marginTop: '20px' }} />
                 </div>
 
-                <div className='formbuttom'>
+                <div className='formmid'>
 
                     <div className='mid'>
                         <label >Username:</label> <br/>
-                        <input type='text' onChange={UpdateUsername} className='inputstyle'></input>
+                        <div className='bothlabels'>
+                            <input type='text' onChange={UpdateUsername} className='inputstyle'></input>
+                            <PersonIcon />
+                        </div>
                     </div>
 
                     <div className='end'>
-                    <label >Password:</label><br/> 
-                        <input type='password' onChange={UpdatePassword} className='inputstyle'></input>
+                        <label >Password:</label><br/>
+                        <div className='bothlabels'> 
+                            <input type='password' onChange={UpdatePassword} className='inputstyle'></input>
+                            <LockIcon />
+                        </div>
                     </div>
 
                 </div>
 
-                <button onClick={submit} className='mybuttons'>Login</button>
+                <div className='formbuttom'>
+                    <button onClick={submit} className='mybuttons'>LOGIN</button>
 
-                <p>Don't have an account? Sign Up</p>
-                
+                    <p>Don't have an account? Sign Up</p>
+                </div>
             </form>
 
         </div>
