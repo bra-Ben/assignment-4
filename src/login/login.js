@@ -44,18 +44,20 @@ function Login() {
                 <div className='formbuttom'>
 
                     <div className='mid'>
-                        <label>Username:</label>
-                        <input type='text' onChange={UpdateUsername}></input>
+                        <label >Username:</label> <br/>
+                        <input type='text' onChange={UpdateUsername} className='inputstyle'></input>
                     </div>
 
                     <div className='end'>
-                        <label>Password:</label>
-                        <input type='password' onChange={UpdatePassword}></input>
+                    <label >Password:</label><br/> 
+                        <input type='password' onChange={UpdatePassword} className='inputstyle'></input>
                     </div>
-                    
+
                 </div>
 
-                <button onClick={submit}>Login</button>
+                <button onClick={submit} className='mybuttons'>Login</button>
+
+                <p>Don't have an account? Sign Up</p>
                 
             </form>
 
