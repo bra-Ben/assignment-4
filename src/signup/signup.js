@@ -8,9 +8,42 @@ import EmailIcon from '@material-ui/icons/Email';
 
 function Signup() {
 
-
+    const [username, setUsername] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [password2, setPassword2] = useState();
     
+    function UpdateUsername(e) {
+        
+        setUsername(e.target.value)
 
+    } 
+
+    function UpdateEmail(e) {
+
+        setEmail(e.target.value)
+
+    }
+
+    function UpdatePassword (e) {
+        setPassword(e.target.value)
+    }
+
+    function UpdatePassword2(e) {
+        setPassword2(e.target.value)
+    }
+
+    function submit(e) {
+        e.preventDefault()
+
+        if (username !== "" && email !== "" && password === password2) {
+            console.log("Account created successfully!")
+        }
+
+        else {
+            console.log("One of your input fields is wrong. Please check again")
+        }
+    }
 
     return (
 
@@ -28,7 +61,7 @@ function Signup() {
                     <div className='labeldiv1'>
                         <label>Username:</label> <br/>
                         <div className='bothlabels'> 
-                            <input type='text' className='inputstyle'></input>
+                            <input type='text' className='inputstyle' onChange={UpdateUsername}></input>
                             <PersonIcon />
                         </div>
                     </div>
@@ -36,7 +69,7 @@ function Signup() {
                     <div className='labeldiv2'>
                         <label>E-mail:</label> <br/>
                         <div className='bothlabels'> 
-                            <input type='email' className='inputstyle'></input>
+                            <input type='email' className='inputstyle' onChange={UpdateEmail}></input>
                             <EmailIcon />
                         </div>
                     </div>
@@ -44,7 +77,7 @@ function Signup() {
                     <div className='labeldiv3'>
                         <label>Password:</label> <br/>
                         <div className='bothlabels'> 
-                            <input type='password' className='inputstyle'></input>
+                            <input type='password' className='inputstyle' onClick={UpdatePassword}></input>
                             <LockIcon />
                         </div>
                     </div>
@@ -52,7 +85,7 @@ function Signup() {
                     <div className='labeldiv4'>
                         <label>Confirm Password:</label> <br/>
                         <div className='bothlabels'> 
-                            <input type='password' className='inputstyle'></input>
+                            <input type='password' className='inputstyle' onClick={UpdatePassword2}></input>
                             <LockIcon />
                         </div>
                     </div>
