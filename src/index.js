@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // My custom styling link
 import '../src/mystyle.css';
+import '../src/signup/signup.css';
 
 ReactDOM.render(
   <React.StrictMode>

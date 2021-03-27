@@ -2,6 +2,8 @@ import { useState } from 'react';
 import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import LockIcon from '@material-ui/icons/Lock';
+import HomeWorkIcon from '@material-ui/icons/HomeWork';
+
 
 
 function Login() {
@@ -43,7 +45,7 @@ function Login() {
 
                 <div className='formtop'>               
                     <h1>Welcome</h1>
-                    <HomeIcon style={{ fontSize: 70, marginTop: '20px' }} />
+                    <HomeWorkIcon style={{ fontSize: 70, marginTop: '20px' }} />
                 </div>
 
                 <div className='formmid'>

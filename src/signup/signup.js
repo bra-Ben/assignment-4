@@ -61,7 +61,7 @@ function Signup() {
                     <div className='labeldiv1'>
                         <label>Username:</label> <br/>
                         <div className='bothlabels'> 
-                            <input type='text' className='inputstyle' onChange={UpdateUsername}></input>
+                            <input type='text' className='signinputstyle' onChange={UpdateUsername}></input>
                             <PersonIcon />
                         </div>
                     </div>
@@ -69,7 +69,7 @@ function Signup() {
                     <div className='labeldiv2'>
                         <label>E-mail:</label> <br/>
                         <div className='bothlabels'> 
-                            <input type='email' className='inputstyle' onChange={UpdateEmail}></input>
+                            <input type='email' className='signinputstyle' onChange={UpdateEmail}></input>
                             <EmailIcon />
                         </div>
                     </div>
@@ -77,7 +77,7 @@ function Signup() {
                     <div className='labeldiv3'>
                         <label>Password:</label> <br/>
                         <div className='bothlabels'> 
-                            <input type='password' className='inputstyle' onClick={UpdatePassword}></input>
+                            <input style={{backgroundColor: 'none'}} type='password' className='signinputstyle' onClick={UpdatePassword}></input>
                             <LockIcon />
                         </div>
                     </div>
@@ -85,7 +85,7 @@ function Signup() {
                     <div className='labeldiv4'>
                         <label>Confirm Password:</label> <br/>
                         <div className='bothlabels'> 
-                            <input type='password' className='inputstyle' onClick={UpdatePassword2}></input>
+                            <input type='password' className='signinputstyle' onClick={UpdatePassword2}></input>
                             <LockIcon />
                         </div>
                     </div>
