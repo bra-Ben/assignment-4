@@ -3,14 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// My DOM imports
+import { BrowserRouter } from 'react-router-dom';
+import { DataStoreProvider } from './pages/store/context';
 // My custom styling link
 import '../src/mystyle.css';
-import '../src/signup/signup.css';
+import '../src/pages/signup/signup.css';
 
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    
+    <DataStoreProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </DataStoreProvider>
+
   </React.StrictMode>,
+
   document.getElementById('root')
 );
 

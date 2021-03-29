@@ -1,15 +1,24 @@
 import { useState } from 'react';
-import HomeIcon from '@material-ui/icons/Home';
+// import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import LockIcon from '@material-ui/icons/Lock';
 import HomeWorkIcon from '@material-ui/icons/HomeWork';
+import { useHistory } from 'react-router-dom';
+
 
 
 
 function Login() {
 
+    let history = useHistory()
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
+    const [message, setMessage] = useState();
+
+// Function for switching pages
+    function goToPage(path) {
+        history.push(path)
+    }
 
 //This function saves the whatever input the user will enter in the Username section.
     function UpdateUsername(e) {
@@ -33,9 +42,11 @@ function Login() {
 
         if (username ==="Benjamin" && password ==="54321") {
             console.log('It\'s working')
-
+            goToPage('/dashboard')
         }
-    }
+        else {
+            setMessage('Wrong Usename or Password')
+        }
 
     return (
 
@@ -44,7 +55,7 @@ function Login() {
             <form className='logindiv'>
 
                 <div className='formtop'>               
-                    <h1>Welcome</h1>
+                    <h1 className='loginh1'>Welcome</h1>
                     <HomeWorkIcon style={{ fontSize: 70, marginTop: '20px' }} />
                 </div>
 

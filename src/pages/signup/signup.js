@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import HomeIcon from '@material-ui/icons/Home';
+// import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import LockIcon from '@material-ui/icons/Lock';
 import EmailIcon from '@material-ui/icons/Email';
@@ -52,7 +52,7 @@ function Signup() {
             <form className='signupdiv'>
 
                 <div className='formtop'>
-                    <h1>Sign-up to join our ever-growing family now...</h1>
+                    <h1 className='signh1'>Sign-up to join our ever-growing family now...</h1>
                     {/* <HomeIcon style={{ fontSize: 70, marginTop: '20px' }} /> */}
                 </div>
 
@@ -94,7 +94,7 @@ function Signup() {
 
                 <div className='formbuttom'>
 
-                    <button className='mybuttons'>Sign Up</button>
+                    <button className='mybuttons' onClick={submit}>Sign Up</button>
                     <p>Already have an account? Login here</p>
 
                 </div>
